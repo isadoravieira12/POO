@@ -20,4 +20,18 @@ public class Cliente {
         System.out.println("Depósito" + valor + "realizado com sucesso ");
     }
 
+    public void sacar(float valor){
+        if(this.saldo >= valor){
+            this.saldo -= valor;
+            System.out.println("Saque realizado com sucesso ");
+        }
+        else{
+            System.out.println("Saldo insuficiente");
+        }
+    }
+
+    public void exibirDetalhes  (){
+        System.out.println("Nro Agencia: " + this.nroAngencia + "Nro Conta: " + this.nroConta + "Nome: " + this.nome + "\nSaldo: " + this.saldo);
+    }
+
 }
